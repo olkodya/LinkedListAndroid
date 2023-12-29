@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">LinkedListAndroid</string>
+    <string name="list">List</string>
+    <string name="push">Push</string>
+    <string name="pop">Pop</string>
+    <string name="insert">Insert</string>
+    <string name="get_by_index">Get by index</string>
+    <string name="sort">Sort</string>
+    <string name="export">Export</string>
+    <string name="clear">Clear</string>
+    <string name="fill_with_10_random_values">Fill with 10 random values</string>
+    <string name="integer">Integer</string>
+    <string name="fraction">Fraction</string>
+    <string name="enter_value">Enter value</string>
+    <string name="invalid_input">Invalid input</string>
+    <string name="successfully">Successfully</string>
+    <string name="invalid_value">Invalid value</string>
+    <string name="invalid_index">Invalid index</string>
+    <string name="string_empty">List is empty</string>
+    <string name="enter_index">Enter index</string>
+    <string name="invalid_fraction">Invalid fraction. Please enter fraction in format: 1 1/2 </string>
+    <string name="invalid_integer">Invalid input. Please enter one integer number</string>
+    <string name="invalid_intInsert">Invalid input. Please enter index and one integer number</string>
+    <string name="invalid_farcInsert">Invalid input. Please enter index and one fraction in format: 1 1/2</string>
+    <string name="get">Get</string>
+
+</resources>

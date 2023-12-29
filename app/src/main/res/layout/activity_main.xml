@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    android:backgroundTint="?colorOnPrimary"
+    tools:context=".MainActivity">
+
+    <RadioGroup
+        android:id="@+id/group"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/list"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/integer"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:text="@string/integer"
+            app:layout_constraintStart_toStartOf="parent"/>
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/fraction"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:text="@string/fraction"
+            app:layout_constraintStart_toStartOf="parent"/>
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/index"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@tools:sample/lorem[130]" />
+
+    <EditText
+        android:id="@+id/index"
+        android:importantForAutofill="no"
+        android:layout_width="0dp"
+        android:background="@android:color/transparent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/value"
+        app:layout_constraintTop_toBottomOf="@+id/list"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:hint="@string/enter_index"
+        android:layout_marginStart="8dp"
+        android:inputType="text"
+        />
+
+    <EditText
+        android:id="@+id/value"
+        android:importantForAutofill="no"
+        android:layout_width="0dp"
+        android:background="@android:color/transparent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/push"
+        app:layout_constraintTop_toBottomOf="@+id/index"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:hint="@string/enter_value"
+        android:inputType="text"
+        />
+
+    <Button
+        android:id="@+id/push"
+        style="@style/Widget.Material3.Button.ElevatedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/push"
+        app:layout_constraintBottom_toTopOf="@+id/insert"
+        app:layout_constraintEnd_toStartOf="@+id/pop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/value" />
+
+    <Button
+        android:id="@+id/pop"
+        style="@style/Widget.Material3.Button.ElevatedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/pop"
+        app:layout_constraintBottom_toTopOf="@+id/getById"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/push"
+        app:layout_constraintTop_toBottomOf="@+id/value" />
+
+    <Button
+        android:id="@+id/insert"
+        style="@style/Widget.Material3.Button.ElevatedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/insert"
+        app:layout_constraintBottom_toTopOf="@+id/sort"
+        app:layout_constraintEnd_toStartOf="@id/getById"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/push" />
+
+    <Button
+        android:id="@+id/getById"
+        style="@style/Widget.Material3.Button.ElevatedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/get"
+        app:layout_constraintBottom_toTopOf="@id/export"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/insert"
+        app:layout_constraintTop_toBottomOf="@id/pop" />
+
+    <Button
+        android:id="@+id/sort"
+        style="@style/Widget.Material3.Button.ElevatedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sort"
+        app:layout_constraintBottom_toTopOf="@id/importBt"
+        app:layout_constraintEnd_toStartOf="@+id/export"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/insert" />
+
+    <Button
+        android:id="@+id/export"
+        style="@style/Widget.Material3.Button.ElevatedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/export"
+        app:layout_constraintBottom_toTopOf="@id/importBt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/sort"
+        app:layout_constraintTop_toBottomOf="@+id/getById" />
+
+    <Button
+        android:id="@+id/importBt"
+        style="@style/Widget.Material3.Button.ElevatedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Import"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/clear"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sort" />
+
+    <Button
+        android:id="@+id/clear"
+        style="@style/Widget.Material3.Button.ElevatedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/clear"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/importBt"
+        app:layout_constraintTop_toBottomOf="@+id/export" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
